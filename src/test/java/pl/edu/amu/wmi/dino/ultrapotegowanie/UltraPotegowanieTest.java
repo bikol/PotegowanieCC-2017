@@ -36,8 +36,26 @@ public class UltraPotegowanieTest {
             
         }
     }
+
+    
+    // Helena Galazka
+    @Test
+    public void testPoteguj4() {
+        assertEquals("1.5", UltraPotegowanie.poteguj("1.5", "1"));
+    }
+    
+    @Test
+     public void testPoteguj5() {
+        assertEquals("2.25", UltraPotegowanie.poteguj("1.5", "2"));
+    }
+     
+    @Test
+     public void testPoteguj6() {
+        assertEquals("0.5", UltraPotegowanie.poteguj("2", "-1"));
+    }
+     
     /////////
-	//Rafal Muzia
+    //Rafal Muzia
 	@test
 	public void test_1() {
         assertEquals("2log10", UltraPotegowanie.poteguj("log10", "2"));
@@ -46,7 +64,8 @@ public class UltraPotegowanieTest {
         assertEquals("2ln5", UltraPotegowanie.poteguj("ln5", "2"));
     }
 	public void test_3() {
-        assertEquals("0,1", UltraPotegowanie.poteguj("10", "-1"));
+        assertEquals("-3", UltraPotegowanie.poteguj("-3", "1"));
     }
-	/////////
+    /////////
+
 }
