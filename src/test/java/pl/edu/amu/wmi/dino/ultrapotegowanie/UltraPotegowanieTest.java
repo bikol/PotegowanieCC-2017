@@ -37,4 +37,16 @@ public class UltraPotegowanieTest {
         }
     }
     /////////
+	//Rafal Muzia
+	@test
+	public void test_1() {
+        assertEquals("2log10", UltraPotegowanie.poteguj("log10", "2"));
+    }
+	public void test_2() {
+        assertEquals("2ln5", UltraPotegowanie.poteguj("ln5", "2"));
+    }
+	public void test_3() {
+        assertEquals("0,1", UltraPotegowanie.poteguj("10", "-1"));
+    }
+	/////////
 }
