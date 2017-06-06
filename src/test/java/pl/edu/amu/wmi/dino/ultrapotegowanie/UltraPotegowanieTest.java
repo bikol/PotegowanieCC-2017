@@ -91,7 +91,8 @@ public class UltraPotegowanieTest {
      /**
      * Mieczyslaw Krawiarz
      * 416098
-     */
+     These tests were made for the first task. There is no need for them in the second one.
+     
     
     @Test
      public void test0x() {
@@ -115,5 +116,6 @@ public class UltraPotegowanieTest {
              assertEquals("0", UltraPotegowanie.poteguj("0x0", Integer.toString(licz)));
          }
     }
+    */
 }
 
