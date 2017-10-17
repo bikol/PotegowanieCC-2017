@@ -119,12 +119,11 @@ public class UltraPotegowanieTest {
     //Rafal Muzia
     @Test 
     public void testPow13() {
-        String start = "10000000";
-        String wynik = "0.000000000000001";
+        String start = "1000000000";
+        String wynik = "0.000000000001";
         for(int i=0;i<10;i++){
             start += "0";
             wynik = wynik.replace('1', '0');
-            wynik += "01";
             assertEquals(wynik, UltraPotegowanie.poteguj(start, "-2"));
         }
     }
@@ -137,7 +136,7 @@ public class UltraPotegowanieTest {
     
     @Test
     public void testNotacjaNaukowa2(){
-        assertEquals("0.00000025",UltraPotegowanie.poteguj("2e3","-2"));
+        assertEquals("0.000000000125",UltraPotegowanie.poteguj("2e3","-3"));
     }
   
      /*
@@ -145,7 +144,7 @@ public class UltraPotegowanieTest {
      * 416051
     */
     
-    @Test
+   @Test
     public void testUlamki(){
     
         assertEquals("0.44721",UltraPotegowanie.potegujPrzyblizenie("0.2","0.5",7));
@@ -153,7 +152,7 @@ public class UltraPotegowanieTest {
     //Daniel Grabowski
     @Test
     public void testPotegieComplexnumber(){
-        assertEquals("2+i",UltraPotegowanie.poteguj("-4", "0.5"));
+        assertEquals("2",UltraPotegowanie.poteguj("4", "0.5"));
     }
     @Test
     public void testPotegiOdwrotnosci(){
@@ -164,4 +163,20 @@ public class UltraPotegowanieTest {
         assertEquals("10000000000",UltraPotegowanie.poteguj("0.1e2", "0.1e2"));
     }
    
+           // Kuba Chrobot
+    @Test
+    public void testPoteguja() {
+        assertEquals("625", UltraPotegowanie.poteguj("25", "2"));
+    }
+    
+    @Test
+     public void testPotegujb() {
+        assertEquals("0.000000008100", UltraPotegowanie.poteguj("123456789", "-0.1e1"));
+    }
+     
+    @Test
+     public void testPotegujc() {
+        assertEquals("1.379729661461215", UltraPotegowanie.poteguj("0.2", "-0.2"));
+    } 
+    
 }
